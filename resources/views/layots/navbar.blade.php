@@ -1,1 +1,2 @@
-<h1> cabecera<!DOCTYPE html>
+
+<h1> Cabecera </h1>
