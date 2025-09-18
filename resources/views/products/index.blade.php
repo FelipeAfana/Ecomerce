@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Lateral Amazon Style</title>
-    <style>
+@extends("layots.app")
+
+@section("css")
+<style>
         * {
             margin: 0
             padding: 0;
@@ -258,9 +255,10 @@
             margin-left: 5px;
         }
     </style>
-</head>
-<body>
-    <div class="container">
+@endsection
+
+@section("content")
+<div class="container">
         <!-- Sidebar Menu -->
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-header">
@@ -388,44 +386,6 @@
         </main>
     </div>
 
-    <script>
-        function toggleSubmenu(element) {
-            element.classList.toggle('active');
-            const submenu = element.nextElementSibling;
-            submenu.classList.toggle('active');
-        }
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
+@endsection
 
-        // Responsive behavior
-        function handleResize() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            if (window.innerWidth <= 768) {
-                menuToggle.style.display = 'block';
-            } else {
-                menuToggle.style.display = 'none';
-                document.getElementById('sidebar').classList.remove('active');
-            }
-        }
-
-        window.addEventListener('resize', handleResize);
-        handleResize(); // Check on load
-
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', function(e) {
-            const sidebar = document.getElementById('sidebar');
-            const menuToggle = document.querySelector('.menu-toggle');
-            
-            if (window.innerWidth <= 768 && 
-                !sidebar.contains(e.target) && 
-                !menuToggle.contains(e.target) &&
-                sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
-    </script>
-</body>
-</html>
