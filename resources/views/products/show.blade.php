@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayStation 5 Digital Edition - Detalles del Producto</title>
-    <style>
+@extends("layots.app")
+
+@section("css")
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -413,9 +410,10 @@
             margin-bottom: 10px;
         }
     </style>
-</head>
-<body>
-    <div class="container">
+@endsection
+
+@section("content")
+<div class="container">
         <!-- Breadcrumb -->
         <div class="breadcrumb">
             <a href="#">Inicio</a> > <a href="#">Videojuegos</a> > <a href="#">Consolas</a> > <a href="#">PlayStation</a> > PlayStation 5 Digital Edition
@@ -672,5 +670,5 @@
             });
         });
     </script>
-</body>
-</html>
+@endsection
+
