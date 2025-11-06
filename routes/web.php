@@ -6,27 +6,20 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', [ProductController::class],'index'
-);
+Route::get('/', [ProductController::class, 'index']);
 
-Route::prefix("products")->controller(ProductController::class) ->group(function(){
+Route::prefix("products")->controller(ProductController::class)->group(function () {
     Route::get("/", "index");
-    Route::get("/create","create");
-    Route::get("/{name}/{category?}","show");
+    Route::get("/create", "create");
+    Route::get("/{name}/{category?}", "show");
 });
-
-
-
-
-
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get("/", [HomeController::class], 'welcom');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::prefix('/admin')->group(function(){
+Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name("admin.index");
-    Route::get('category/create', [CategoryController::class])->name('admin.category.create');
-    Route::post('categort/store',[CategoryController::class])->name('admin.category.store');
+    Route::get('category/create', [CategoryController::class, 'create'])->name('admin.category.create');
+    Route::post('categort/store', [CategoryController::class, 'store'])->name('admin.category.store');
 });
