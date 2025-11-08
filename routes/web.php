@@ -19,7 +19,8 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name("admin.index");
+    Route::get('/', [CategoryController::class, 'store'])->name("admin.index");
     Route::get('category/create', [CategoryController::class, 'create'])->name('admin.category.create');
-    Route::post('categort/store', [CategoryController::class, 'store'])->name('admin.category.store');
+    Route::get('category/store', [CategoryController::class, 'store'])->name('admin.category.store');
+
 });

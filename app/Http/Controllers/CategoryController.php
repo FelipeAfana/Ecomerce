@@ -11,7 +11,7 @@ class CategoryController extends Controller
         return view('admin.category.create');
     }
 
-    public function store(Request $request){
+    public function coso(Request $request){
         dd($request->all());
 
         Category::create([
@@ -19,5 +19,8 @@ class CategoryController extends Controller
         ]);
 
         return "SE GUADO EXITOSAMENTE";
+    }
+    public function store(){
+        return view('admin.category.dashboard');
     }
 }

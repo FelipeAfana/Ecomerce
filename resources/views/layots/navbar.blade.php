@@ -7,12 +7,11 @@
             <span class="amazon-logo">amazon</span>
         </a>
 
-       
-
-    
-
             <!-- Sección derecha -->
             <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('admin.index') }}">{{ __('Admin') }}</a>
+                        </li>
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
