@@ -17,6 +17,7 @@ return new class extends Migration
             $table->decimal("price");
             $table->text("descripcion");
             $table->timestamps();
+            //$table->string('url_image');
 
             $table->unsignedBigInteger("category_id");
             $table->foreign("category_id")->references("id")->on("category");

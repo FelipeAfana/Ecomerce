@@ -1,34 +1,55 @@
-<footer class="footer py-4  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with love <i class="fa fa-heart"></i> by
-                <a href="#" class="font-weight-bold" target="_blank">Software Development Lovers</a>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About
-                    Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
-                    target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+<link rel="stylesheet" href="{{asset('css/style_footer.css')}}">
+
+  <footer class="amazon-footer">
+    <div class="footer-top">
+        <a  class="footer-logo">amazon</a>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Conócenos</h4>
+            <ul>
+                <li><a >Trabaja con nosotros</a></li>
+                <li><a >Información corporativa</a></li>
+                <li><a >Prensa</a></li>
+                <li><a >Comunidad Amazon</a></li>
+            </ul>
         </div>
-      </footer>
+
+        <div class="footer-column">
+            <h4>Gana dinero con nosotros</h4>
+            <ul>
+                <li><a>Vende en Amazon</a></li>
+                <li><a >Afíliate a Amazon</a></li>
+                <li><a >Anuncia tus productos</a></li>
+                <li><a >Publica tu libro</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Podemos ayudarte</h4>
+            <ul>
+                <li><a >Tu cuenta</a></li>
+                <li><a>Devoluciones y pedidos</a></li>
+                <li><a >Centro de ayuda</a></li>
+                <li><a >Envíos y entregas</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Conéctate</h4>
+            <ul class="social-links">
+                <li><a >Facebook</a></li>
+                <li><a >Twitter</a></li>
+                <li><a >Instagram</a></li>
+                <li><a">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Amazon Clon — Proyecto educativo Laravel</p>
+        <p><a h>Condiciones de uso</a> | <a >Aviso de privacidad</a> | <a >Cookies</a></p>
+    </div>
+</footer>
+

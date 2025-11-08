@@ -1,0 +1,45 @@
+.bg-amazon {
+    background-color: #232f3e !important;
+}
+
+.amazon-brand {
+    color: #ff9900 !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ffffffcc !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff9900 !important;
+}
+
+.btn-light {
+    background-color: #fff !important;
+    color: #232f3e !important;
+    border: none;
+}
+
+.btn-outline-light {
+    border: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #ff9900 !important;
+    color: #fff !important;
+}
+
+.navbar {
+    padding: 0.8rem 1rem;
+}
+
+.dropdown-menu {
+    font-size: 0.9rem;
+}
