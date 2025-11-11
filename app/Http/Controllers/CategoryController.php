@@ -21,6 +21,6 @@ class CategoryController extends Controller
         return "SE GUADO EXITOSAMENTE";
     }
     public function store(){
-        return view('admin.category.dashboard');
+        return view('admin.dashboard');
     }
 }

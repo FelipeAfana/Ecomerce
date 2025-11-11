@@ -17,6 +17,6 @@ class BrandSeeder extends Seeder
         $myCategory1-> name ="Nintendo";
         $myCategory1->save();
 
-        Brand::factory(1000)->create();
+        Brand::factory(20)->create();
     }
 }

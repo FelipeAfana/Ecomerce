@@ -12,8 +12,22 @@ class BrandFactory extends Factory
    
     public function definition(): array
     {
+
+        $brand=[
+            'Apple',
+            'Samsung',
+            'Sony',
+            'LG',
+            'Dell',
+            'HP',
+            'Lenovo',
+            'Asus',
+            'Acer',
+            'Microsoft'
+        ];
         return [
-            'name' => fake()->name()
+            'name' => $this->faker->randomElement($brand),
+
         ];
     }
 }

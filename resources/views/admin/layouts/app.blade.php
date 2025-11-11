@@ -174,7 +174,7 @@
             
 
             {{-- FOOTER --}}
-            @include('layots.footer')
+            @include('admin.layouts.footer')
         </div>
     </main>
 

@@ -8,11 +8,8 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [ProductController::class, 'index']);
 
-Route::prefix("products")->controller(ProductController::class)->group(function () {
-    Route::get("/", "index");
-    Route::get("/create", "create");
-    Route::get("/{name}/{category?}", "show");
-});
+Route::get('products/{name}/{category?}', [ProductController::class, 'show']);
+
 
 Auth::routes();
 
@@ -22,5 +19,7 @@ Route::prefix('/admin')->group(function () {
     Route::get('/', [CategoryController::class, 'store'])->name("admin.index");
     Route::get('category/create', [CategoryController::class, 'create'])->name('admin.category.create');
     Route::get('category/store', [CategoryController::class, 'store'])->name('admin.category.store');
+
+    Route::get("products/create", [ProductController::class, 'create'])->name('admin.product.create');
 
 });

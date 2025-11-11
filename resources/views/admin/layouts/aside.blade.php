@@ -28,7 +28,7 @@
 
             {{-- Products --}}
             <li class="nav-item mb-1">
-                <a href="#"
+                <a href="{{route('admin.product.create')}}"
                    class="nav-link d-flex align-items-center px-4 py-2 rounded text-light hover-gold">
                     <i class="material-symbols-rounded me-2 opacity-75">table_view</i>
                     <span>Products</span>
