@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             BrandSeeder::class 
         ]);
+
+        Products::factory(1000)->create();
         }
 }
