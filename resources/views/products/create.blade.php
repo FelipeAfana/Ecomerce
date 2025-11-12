@@ -39,9 +39,10 @@
             <div class="input-group input-group-outline mb-3">
                 <select class="form-control"  id="productCategory">
                     <option value=""  selected disabled >Seleccione una categoría</option>
-                    <option value="electronica">Electrónica</option>
-                    <option value="ropa">Ropa</option>
-                    <option value="libros">Libros</option>
+                    @foreach ($category as $item)
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                    @endforeach
+                    
                 </select>
             </div>
 
@@ -49,9 +50,9 @@
             <div class="input-group input-group-outline mb-3">
                 <select class="form-control"  id="productBrand">
                     <option value="" selected disabled>Seleccione una marca</option>
-                    <option value="electronica">Electrónica</option>
-                    <option value="ropa">Ropa</option>
-                    <option value="libros">Libros</option>
+                    @foreach ($brands as $item)
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                    @endforeach
                 </select>
             </div>
 
