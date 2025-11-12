@@ -52,4 +52,14 @@ class ProductController extends Controller
         return "save products";
 
     }
+    
+    public function table(){
+
+        $product= Products::all();
+
+        
+        return view('products.table',[
+            'product'=>$product
+        ]);
+    }
 }
