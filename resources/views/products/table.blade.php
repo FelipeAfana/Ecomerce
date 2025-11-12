@@ -3,6 +3,7 @@
 @section('content')
     <div class="card">
         <h3>List products</h3>
+        <a type="button" class="btn btn-success" href="{{route('admin.product.create')}}">Add new products</a>
         <div class="card-body">
 
         <table class="table align-items-center mb-0">
@@ -54,9 +55,11 @@
                     
                 @endforeach
                 
-                
-            </tbody>
+                </tbody>
+
         </table>
+
+        {{ $product->links() }}
 
         </div>
     </div>

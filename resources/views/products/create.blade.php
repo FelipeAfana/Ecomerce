@@ -32,8 +32,8 @@
             @enderror
             <div class="input-group input-group-outline mb-3">
                 <label for="productPrice" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="productPrice"
-                step="0.01" name="price" value="{{old('name')}}">
+                <input type="text" class="form-control" id="productPrice"
+                step="0.01" name="price" value="{{old('price')}}">
             </div>
 
             <!--Descripcion-->
@@ -42,7 +42,7 @@
             @enderror
             <div class="input-group input-group-outline mb-3">
                 <label for="productDescription" class="form-label">Descripción</label>
-                <textarea id="descripcion" class="form-control" row="3" name="description">{{old('name')}}</textarea>
+                <textarea id="descripcion" class="form-control" row="3" name="description">{{old('description')}}</textarea>
             </div>
 
             <!--Categoria-->
