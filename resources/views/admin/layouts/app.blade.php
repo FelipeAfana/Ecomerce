@@ -120,8 +120,8 @@
 
                 {{-- Products --}}
                 <li class="nav-item">
-                    <a href="#"
-                       class="nav-link">
+                    <a href="{{route('admin.product.create')}}"
+                       class="nav-link {{ Request::is('admin/products/create') ? 'active' : '' }}">
                         <i class="material-symbols-rounded opacity-75">table_view</i>
                         <span>Products</span>
                     </a>

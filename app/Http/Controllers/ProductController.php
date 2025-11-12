@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -26,5 +27,22 @@ class ProductController extends Controller
     {
         
         return view("products.show");
+    }
+
+    public function store(Request $request)
+    {
+        
+
+        $product = new Products();
+        $product->name = $request->get('name');
+        $product->descripcion = $request->get('description');
+        $product->price = $request->get('price');
+        $product->category_id = $request->get( 'category');
+        $product->brand_id = $request->get('brand');
+
+        $product->save();
+
+        return "save products";
+
     }
 }
